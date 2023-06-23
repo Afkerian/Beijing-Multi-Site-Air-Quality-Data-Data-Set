@@ -18,6 +18,7 @@ contaminants. Pollutants can be measured quite differently. SO2, NO2 and PM10 ar
 as a daily average. CO and O3 are more damaging and are measured as an hourly average. The end value of
 AQI is calculated per day and has the interpretation shown in the following table.
 
+
 ![Table 1](/images/Health_Implications.jpg)
 
 
