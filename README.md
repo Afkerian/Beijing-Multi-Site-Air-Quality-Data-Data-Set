@@ -2,7 +2,7 @@
 The present project aims to predict air pollution in Beijing, China, using the data set "Beijing Multi-Site Air-Quality Data Data Set"
 
 The present project aims to predict air pollution in Beijing, China, using the
-"Beijing Multi-Site Air-Quality Data Data Set" data set, available at [Beijing Multi-Site Air-Quality Data](http://archive.ics.uci.edu/dataset/501/beijing+multi+site +air+quality+data).
+"Beijing Multi-Site Air-Quality Data Data Set" data set, available at ![Beijing Multi-Site Air-Quality Data](http://archive.ics.uci.edu/dataset/501/beijing+multi+site +air+quality+data).
 This data set includes hourly air pollutant data from 12 air pollution monitoring sites.
 nationally controlled air quality. The air quality data comes from the Monitoring Center
 Beijing Municipal Environmental. The meteorological data of each air quality site are related
