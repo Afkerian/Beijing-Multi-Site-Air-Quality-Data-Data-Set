@@ -3,6 +3,7 @@ The present project aims to predict air pollution in Beijing, China, using the d
 
 The present project aims to predict air pollution in Beijing, China, using the
 "Beijing Multi-Site Air-Quality Data Data Set" data set, available at [Beijing Multi-Site Air-Quality Data](http://archive.ics.uci.edu/dataset/501/beijing+multi+site+air+quality+data).
+
 This data set includes hourly air pollutant data from 12 air pollution monitoring sites.
 nationally controlled air quality. The air quality data comes from the Monitoring Center
 Beijing Municipal Environmental. The meteorological data of each air quality site are related
@@ -83,3 +84,46 @@ computer.
 eval=FALSE so that the code is not executed. If the output of your code is needed, you can execute it
 locally on your computer, save it to a binary file, and load it into your report.
 
+---------
+
+# Activate the python environment
+
+1. Make sure you have Python installed on your system. You can download it from the official Python site: https://www.python.org/
+
+2. Create a new virtual environment for your project. Open a terminal and run the following command:
+
+     ```
+     python -m venv environment/
+     ```
+
+This will create a new virtual environment with the name of your choice.
+
+3. Activate the virtual environment. Depending on your operating system, run one of the following commands:
+
+- On Windows:
+
+   ```
+   source environment\Scripts\activate
+   ```
+
+- On macOS and Linux:
+
+   ```
+   source environment/bin/activate
+   ```
+
+When activating the virtual environment, your terminal will show the name of the environment in brackets.
+
+## Install the requirements
+
+1. Make sure you are in the root directory of your project in the terminal.
+
+2. Run the following command to install the requirements from the `requirements.txt` file:
+
+     ```
+     pip install -r requirements.txt
+     ```
+
+This will install all the dependencies specified in the `requirements.txt` file into your virtual environment.
+
+3. Once the installation is complete, you are ready to run and work on the project.
