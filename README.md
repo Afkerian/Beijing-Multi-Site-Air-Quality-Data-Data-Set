@@ -110,7 +110,7 @@ This will create a new virtual environment with the name of your choice.
 - On macOS and Linux:
 
    ```
-   source environment/bin/activate
+   source env/bin/activate
    ```
 
 When activating the virtual environment, your terminal will show the name of the environment in brackets.
