@@ -1,0 +1,124 @@
+ %%%%% Fichero de ejemplo LaTeX que ilustra el uso de la Hoja de Estilo %%%%%%
+%%%%% Jornadas.cls para Jornadas Sarteco
+
+\documentclass[twocolumn,twoside]{Jornadas}
+\usepackage{listings}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{listings}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algcompatible}
+\usepackage{adjustbox}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{caption}
+\captionsetup{font=footnotesize}
+\usepackage[caption=false,font=footnotesize]{subfig}
+%\setlength{\marginparwidth}{2cm}
+%\usepackage{todonotes}
+\usepackage{placeins}
+\usepackage{hyperref}
+\usepackage{url}
+
+% -*- Ajustes LaTeX en relación a las figuras -*-
+\setcounter{topnumber}{10}     % Max. numero de figs. on top
+\setcounter{bottomnumber}{10}  % Max. numero de figs. abajo
+\setcounter{totalnumber}{10}   % Max. numero de figs. por pagina
+\renewcommand{\topfraction}{1} % Max. fraccion de pagina ocupada por figs.
+\renewcommand{\bottomfraction}{1}
+\renewcommand{\textfraction}{0}  % Min. fraccion de pagina ocupada por texto
+\renewcommand{\floatpagefraction}{1} % Max. espacio de pagina solo con figs.
+
+\definecolor{gray97}{gray}{.97}
+\definecolor{gray75}{gray}{.75}
+\definecolor{gray45}{gray}{.45}
+
+\lstset{
+     inputencoding=utf8,
+     extendedchars=true,
+     backgroundcolor=\color{gray97},
+     %
+     stringstyle=\ttfamily,
+     showstringspaces = false,
+     basicstyle=\scriptsize\ttfamily,
+     commentstyle=\color{gray45},
+     keywordstyle=\bfseries,
+     linewidth=.98\columnwidth,
+     xleftmargin=3mm,
+     breaklines=true,
+     numbers=left,
+     numbersep=6pt,
+     numberstyle=\tiny,
+     numberfirstline = false,
+     firstnumber=auto,
+     breaklines=true,
+     %
+     escapeinside={(*@}{@*)},
+     literate={á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1 {ñ}{{\~n}}1
+   }
+
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+\newtheorem{theorem}{Teorema}
+
+\hyphenation{pa-ra-le-lis-mo pro-cee-dings}
+
+%Directorios en los que se buscan las figuras
+\graphicspath{{.}{./Figuras/}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\title{Analítica Prescriptiva}
+
+\author{%
+     Mendoza Mestanza Gutenberg Stiven%
+     \thanks{Facultad de Ingeniería en Sistemas Informáticos, Ciencias de la Computación, e-mail: {\tt gutenberg.mendoza@epn.edu.ec}},
+     Moya Barragán Fabricio Alejandro% 
+     \thanks{Facultad de Ingeniería en Sistemas Informáticos, Ciencias de la Computación, 
+     e-mail: {\tt fabricio.moya@epn.edu.ec}}
+}
+
+\maketitle
+% Oculta las cabeceras y los números de página.
+% Ambos elementos se añadirán durante la edición de las actas completas.
+\markboth{}{}
+\pagestyle{empty} 
+\thispagestyle{empty} % Oculta el número de la primera página
+
+\begin{abstract}
+Este estudio presenta el desarrollo de un modelo predictivo basado en Árbol de decisión para clasificar el nivel de contaminación ambiental. Se utiliza la librería LazyPredict de Python para evaluar diferentes modelos y se analizan las métricas obtenidas. Se discuten las limitaciones identificadas y se sugieren trabajos futuros. Este enfoque puede contribuir a la toma de decisiones informadas y a la implementación de medidas de protección ambiental más efectivas.
+.
+\end{abstract}
+
+\begin{keywords}
+contaminación ambiental, modelado predictivo, Árbol de decisión, LazyPredict, clasificación.
+\end{keywords}
+
+%Añade los ficheros que necesites:
+
+\input{Papper IB/01-Introduccion}
+\input{Papper IB/02-Definición_del_problema}
+\input{Papper IB/03-Preprocesamiento_de_datos}
+\input{Papper IB/04-Analisis_exploratorio_de_datos}
+\input{Papper IB/05-Modelo_predictivo}
+\input{Papper IB/06-Conclusiones}
+\input{Papper IB/07-Limitaciones}
+\input{Papper IB/08-Trabajos_Futuros}
+\input{Papper IB/09-Anexos}
+
+
+%\section*{Agradecimientos}
+
+%%%El presente trabajo tiene como objetivo cumplir los requerimiento de la materia de Multiprocesamiento y Arquitecturas Alternativas, aplicando lo aprendido durante el semestre con el fin de plantear una propuesta viable de un Centro de Datos o Data Center que estaría ubicado en el campus "Ruber Orellana" de la Escuela Politécnica Nacional y cumpliría con las especificaciones de un programa de inclusión digital, permitiendo así a los estudiantes, docentes y planta científica desarrollar su investigación, siendo este Data Center de tipo TIER II. 
+
+%Comenta la línea \nocite para que sólo se incluyan en las referencias
+%las entradas que esté referenciadas en el texto con \cite{}
+%\nocite{*}
+\bibliographystyle{Jornadas}
+\bibliography{biblio}
+
+\end{document}
+

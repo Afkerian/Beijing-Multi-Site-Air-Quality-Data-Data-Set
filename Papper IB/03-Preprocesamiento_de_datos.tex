@@ -1,0 +1,10 @@
+%!TEX root = main.tex
+\section{Preprocesamiento de datos}
+
+En nuestra primera etapa de preprocesamiento de datos, nos embarcamos en un análisis de dimensionalidad de múltiples conjuntos de datos con estructuras similares. Este análisis nos permitió determinar que todos los conjuntos de datos eran estructuralmente idénticos, lo que significa que el análisis de un conjunto de datos individual sería representativo del análisis de todos los conjuntos juntos. A continuación, desarrollamos una función para calcular el Índice de Calidad del Aire (AQI) basándonos en los contaminantes presentes y lo separamos en cuatro categorías distintas: Excellent - Good, Slightly - Lightly Polluted, Moderately - Heavily Polluted, y Severely Polluted.\cite{liang2015beijing}
+
+Empleamos la correlación de Pearson para identificar correlaciones dentro de los datos, y establecimos un umbral de 0.8 para eliminar aquellas columnas que exhibían una alta correlación. Este proceso nos permitió minimizar la redundancia y mejorar la eficiencia del modelo que estamos entrenando. 
+
+A continuación, abordamos la presencia de valores nulos en los conjuntos de datos. Para la mayoría de las columnas, reemplazamos estos valores con la media. Sin embargo, para la columna 'wd', implementamos una técnica llamada codificación 'dummy' o 'one-hot'. En el caso de las columnas 'station' y 'AQI', aplicamos codificación de etiquetas (label encoding) para convertir los datos categóricos en una forma que nuestro modelo de aprendizaje automático podría interpretar y procesar.
+
+Para finalizar, equilibramos nuestro conjunto de datos utilizando la técnica RandomOverSampler, lo cual ayuda a evitar un sesgo hacia clases más frecuentes. Este proceso de preprocesamiento es esencial para preparar nuestros datos para la formación del modelo de aprendizaje automático.\cite{liang2014hourly}
